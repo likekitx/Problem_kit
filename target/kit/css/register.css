@@ -1,0 +1,141 @@
+*{
+    text-decoration: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-image: radial-gradient(rgba(0, 234, 255, 0.3), rgba(68, 226, 220, 0) 40vw), radial-gradient(rgba(0, 28, 128, 0.3), rgba(0, 128, 0, 0) 40vw), radial-gradient(rgba(0, 0, 255, 0.3), rgba(0, 0, 255, 0) 40vw), radial-gradient(rgba(255, 255, 0, 0.3), rgba(255, 255, 0, 0) 40vw), radial-gradient(rgba(255, 0, 0, 0.3), rgba(255, 0, 0, 0) 40vw);
+    background-position: -40vw 14rem, 50% 10rem, 60vw 14rem, -10vw calc(14rem + 20vw), 30vw calc(14rem + 20vw);
+    background-size: 85vw 85vw;
+    background-repeat: no-repeat;
+}
+body .outer{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+header{
+    /*border: 1px solid black;*/
+    width: 750px;
+    height: 100px;
+    position: relative;
+    margin-left: 0;
+}
+header .headIcon{
+    /*border: 1px solid black;*/
+    width: 700px;
+    height: 60px;
+    text-align: center;
+    font: 700 60px STXingkai;
+    margin-top: 20px;
+    color: #3ea6fd;
+}
+.bodyDiv{
+    /*border: 1px solid black;*/
+    width: 550px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -250px;
+    margin-top: -230px;
+}
+.bodyDiv .bodyTop{
+    /*border: 1px solid black;*/
+    width: 550px;
+    height: 60px;
+    text-align: center;
+    font: 700 60px STXingkai;
+    color: #3ea6fd;
+    position: relative;
+}
+.bodyDiv .bodyRegister{
+    /*border: 1px solid black;*/
+    width: 550px;
+    height: 390px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -170px;
+    margin-left: -275px;
+    float: left;
+}
+.bodyDiv .bodyRegister form p{
+    font:600 20px STXingkai;
+    color: #3ea6fd;
+}
+.bodyDiv .bodyRegister .layui-form{
+    position: relative;
+    /*border: 1px solid black;*/
+    height: 370px;
+    width: 450px;
+    top: 50%;
+    left: 50%;
+    margin-left: -225px;
+    margin-top: -185px;
+}
+.bodyDiv .bodyRegister .layui-form .layui-form-item{
+    width: 360px;
+    height: 50px;
+    /*border: 1px solid black;*/
+    left: 50%;
+    margin-left: -180px;
+    position:relative;
+}
+.bodyDiv .bodyRegister .layui-form .layui-form-item i{
+    float: left;
+    margin: 4px 4px;
+    font-size: 37px;
+    color: #77beff;
+}
+.bodyDiv .bodyRegister .layui-form .layui-form-item .layui-form-label{
+    width: 50px;
+    font: 520 20px SourceHanSansSC;
+    margin-top: 11px;
+    padding: 0 4px 0 0;
+}
+.bodyDiv .bodyRegister .layui-form .layui-form-item .layui-input-block{
+    /*border: 1px solid black;*/
+    width: 235px;
+    height: 40px;
+    position: relative;
+    top: 4px;
+}
+.bodyDiv .bodyRegister .layui-form .layui-form-item .layui-input-block input{
+    width: 100%;
+    height: 40px;
+    font: 500 15px SourceHanSansSC;
+}
+.bodyDiv .bodyRegister .layui-form .layui-submit{
+    /*border: 1px solid black;*/
+    width: 450px;
+    height: 60px;
+    position: relative;
+    margin: 10px auto auto;
+}
+.bodyDiv .bodyRegister .layui-form .layui-submit .layui-btn{
+    width: 74%;
+    height: 74%;
+    position: absolute;
+    top: 7px;
+    left: 54px;
+    border-radius: 12px;
+    letter-spacing: 10px;
+    font: 600 22px STXingkai;
+    background-color: #3ea6fd;
+    font-size: 25px;
+}
+body .layui-demo .layui-layer-content{
+    font: 500 16px SourceHanSansSC;
+}
+body .layui-demo .layui-layer-btn a{
+    width: 40px;
+    height: 30px;
+    background-color: #3ea6fd;
+    text-align: center;
+    font: 500 17px SourceHanSansSC;
+}

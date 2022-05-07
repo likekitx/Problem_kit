@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kitten.Dao.Admin.AdminLoginMapper">
+    <resultMap id="admin" type="admin">
+        <result column="account" property="account"/>
+        <result column="password" property="password"/>
+        <result column="name" property="name"/>
+    </resultMap>
+    <select id="getAdminMapper" resultMap="admin">
+        select * from problem.admin where account = #{account} and password = #{password}
+    </select>
+</mapper>

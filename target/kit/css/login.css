@@ -1,0 +1,11 @@
+.bodyDiv .bodyRegister .layui-form{
+    height: 270px;
+    margin-top: -155px;
+}
+.bodyDiv .bodyRegister .layui-form .layui-form-item{
+    top: 25px;
+    margin-top: 5px;
+}
+.bodyDiv .bodyRegister .layui-form .layui-submit{
+    margin: 45px auto auto;
+}

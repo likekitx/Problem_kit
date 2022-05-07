@@ -1,0 +1,190 @@
+*{
+    text-decoration: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-image: radial-gradient(rgba(0, 234, 255, 0.3), rgba(68, 226, 220, 0) 40vw), radial-gradient(rgba(0, 28, 128, 0.3), rgba(0, 128, 0, 0) 40vw), radial-gradient(rgba(0, 0, 255, 0.3), rgba(0, 0, 255, 0) 40vw), radial-gradient(rgba(255, 255, 0, 0.3), rgba(255, 255, 0, 0) 40vw), radial-gradient(rgba(255, 0, 0, 0.3), rgba(255, 0, 0, 0) 40vw);
+    background-position: -40vw 14rem, 50% 10rem, 60vw 14rem, -10vw calc(14rem + 20vw), 30vw calc(14rem + 20vw);
+    background-size: 85vw 85vw;
+    background-repeat: no-repeat;
+    position: relative;
+}
+body .outer{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+header{
+    /*border: 1px solid black;*/
+    width: 500px;
+    height: 100px;
+    position: absolute;
+    left: 0;
+}
+header .headIcon{
+    /*border: 1px solid black;*/
+    width: 450px;
+    height: 60px;
+    text-align: center;
+    font: 700 60px STXingkai;
+    margin-top: 20px;
+    color: #3ea6fd;
+}
+.outer .bodyDiv{
+    /*border: 1px solid black;*/
+    width: 900px;
+    height: 600px;
+    position: relative;
+    margin: 130px auto auto;
+}
+.bodyDiv .bodyTop{
+    /*border: 1px solid black;*/
+    width: 120px;
+    text-align: center;
+    padding-top: 18px;
+    height: 40px;
+    font:600 24px STXingkai;
+    color: #3ea6fd;
+    position: relative;
+}
+.bodyDiv .layui-form{
+    position: relative;
+    font: 600 30px Source Code Pro;
+    color: #4c4b4b;
+    /*border: 1px solid black;*/
+    width: 850px;
+    height: 540px;
+    left: 50%;
+    margin-left: -425px;
+}
+.bodyDiv .layui-form .bodyRegister {
+    position: absolute;
+    /*border: 1px solid #000000;*/
+    width: 800px;
+    margin: auto auto;
+    height: 420px;
+}
+.bodyDiv .layui-form .hid{
+    display: none;
+}
+.bodyDiv .layui-form .bodyRegister .panel{
+    /*border: 1px solid black;*/
+    height: 140px;
+    width: 800px;
+    text-align: left;
+    padding-top: 20px;
+}
+.bodyDiv .layui-form .bodyRegister .layui-form-item{
+    /*border: 1px solid black;*/
+    height: 258px;
+    width: 800px;
+    margin-bottom: 0;
+}
+.bodyDiv .layui-form .bodyRegister .layui-form-item .layui-input-block{
+    height: 250px;
+    width: 800px;
+    /*border: 1px solid black;*/
+    margin: 0;
+    padding: 0;
+}
+.bodyDiv .layui-form .bodyRegister .layui-form-item .layui-input-block .layui-form-radio{
+    width: 800px;
+    height: 62px;
+    /*border: 1px solid black;*/
+    line-height: 62px;
+    margin: 0;
+    padding: 0;
+}
+.bodyDiv .layui-form .bodyRegister .layui-form-item .layui-input-block .layui-anim{
+    animation-duration: 0.2s;
+}
+.layui-form-radio *{
+    font-size: 18px;
+}
+.bodyDiv .layui-form .layui-submit{
+    /*border: 1px solid black;*/
+    width: 800px;
+    height: 73px;
+    position: absolute;
+    margin: 440px auto auto;
+}
+.bodyDiv .layui-form .layui-submit .layui-btn{
+    width: 350px;
+    height: 80%;
+    border-radius: 12px;
+    letter-spacing: 10px;
+    font: 600 25px STXingkai;
+    margin-top: 7px;
+    margin-left: 0;
+    background-color: #43adff;
+}
+.bodyDiv .layui-form .layui-submit .next{
+    float: right;
+}
+.bodyDiv .layui-form .layui-submit .last{
+    float: left;
+}
+.outer .card{
+    position: absolute;
+    width: 285px;
+    height: 780px;
+    top: 50px;
+    right: 40px;
+    /*border: 1px solid black;*/
+}
+.outer .card ul{
+    display: inline-block;
+    width: 100%;
+    height: 728px;
+    /*border: 1px solid black;*/
+}
+.outer .card ul li{
+    font: 520 16px SourceHanSansSC;
+    display: inline-block;
+    width: 80px;
+    height: 40px;
+    border: 1px solid #807f7f;
+    border-radius: 4px;
+    margin: 5px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.outer .card .layui-submit{
+    /*border: 1px solid black;*/
+    width: 270px;
+    height: 50px;
+    margin: auto;
+}
+.outer .card .layui-submit .layui-btn{
+    width: 270px;
+    height: 46px;
+    border-radius: 4px;
+    letter-spacing: 10px;
+    font: 600 25px STXingkai;
+    margin-top: 3px;
+    background-color: #43adff;
+    /*border: 1px solid black;*/
+}
+.outer .layui-anim{
+    animation-duration: 1.2s;
+}
+.layui-demo .layui-layer-content{
+    font: 500 16px SourceHanSansSC;
+}
+.layui-demo .layui-layer-btn a{
+    width: 50px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #3ea6fd;
+    text-align: center;
+    font: 500 17px SourceHanSansSC;
+}
