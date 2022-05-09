@@ -4,6 +4,10 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.kitten.Dao.User.UserCommit.UserCommitMapper">
     <update id="commitGrade" parameterType="users">
-        update users set grade = #{grade} where id = #{id}
+        update users set grade = #{grade} where account = #{account}
     </update>
+
+    <select id="selectGrade" resultType="long" parameterType="users">
+        select grade from users where account = #{account}
+    </select>
 </mapper>

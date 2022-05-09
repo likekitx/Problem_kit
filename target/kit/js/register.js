@@ -1,5 +1,4 @@
 ﻿layui.use(['form','jquery'],function (form,jquery) {
-    location.reload ()
     let $ = jquery;
     //自定义验证规则
     form.verify({

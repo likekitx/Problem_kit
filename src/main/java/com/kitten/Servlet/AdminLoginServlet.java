@@ -1,20 +1,19 @@
 package com.kitten.Servlet;
 
 import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONArray;
 import com.kitten.Pojo.Admin;
 import com.kitten.Service.Admin.AdminLoginService;
 import com.kitten.Service.Admin.AdminLoginServiceImpl;
 import com.kitten.Util.SessionConstants.Constants;
 import com.kitten.Util.StaticUtil;
-import com.mysql.cj.xdevapi.JsonArray;
-import jakarta.servlet.*;
-import jakarta.servlet.http.*;
-import jakarta.servlet.annotation.*;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.io.StreamCorruptedException;
 
 /**
  * @author 27213

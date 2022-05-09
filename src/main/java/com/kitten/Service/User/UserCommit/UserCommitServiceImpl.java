@@ -19,4 +19,13 @@ public class UserCommitServiceImpl implements UserCommitService {
         sqlSession.close();
         return b;
     }
+
+    @Override
+    public long selectGrade(Users users) {
+        SqlSession sqlSession = MyBatisUtil.getSqlSession();
+        UserCommitMapper mapper = sqlSession.getMapper(UserCommitMapper.class);
+        long b = mapper.selectGrade(users);
+        sqlSession.close();
+        return b;
+    }
 }

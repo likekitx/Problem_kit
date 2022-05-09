@@ -4,6 +4,7 @@
     <meta name="referrer" content="no-referrer">
     <title>login</title>
     <link href="${pageContext.request.contextPath}/static/css/layui.css" rel="stylesheet"/>
+    <link href="${pageContext.request.contextPath}/css/in.css" rel="stylesheet"/>
     <link href="${pageContext.request.contextPath}/css/register.css" rel="stylesheet"/>
     <link href="${pageContext.request.contextPath}/css/login.css" rel="stylesheet"/>
 </head>

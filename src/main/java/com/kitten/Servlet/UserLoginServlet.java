@@ -28,20 +28,20 @@ public class UserLoginServlet extends HttpServlet {
         String pid = request.getParameter("pid");
         if(pid.equals(StaticUtil.user)){
             //拿到当前用户
-            Users us = (Users)request.getSession().getAttribute(Constants.CONSTANTSSESSION);
+            Users users = (Users) request.getSession().getAttribute(Constants.CONSTANTSSESSION);
             UserLoginService userLoginService = new UserLoginServiceImpl();
             //登陆用户
-            Users userLogin = userLoginService.getUserLogin(request.getParameter("account"), request.getParameter("password"));
-            if(userLogin==null){
-                writeResponse(response,"null");
-            }else {
-                //判断当前的账号是不是注册的账号
-                if(us.getAccount().equals(userLogin.getAccount())){
-                    writeResponse(response,userLogin);
+            String account = request.getParameter("account");
+            Users userLogin = userLoginService.getUserLogin(account, request.getParameter("password"));
+            if(users.getAccount().equals(account)){
+                if(userLogin==null){
+                    writeResponse(response,"null");
                 }else {
-                    //刚才的账号
-                    writeResponse(response,"same");
+                    request.getSession().setAttribute(Constants.CONSTANTSSESSION,userLogin);
+                    writeResponse(response,userLogin);
                 }
+            }else {
+                writeResponse(response,"same");
             }
             request.getSession().setAttribute("login","ture");
         }

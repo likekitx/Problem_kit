@@ -4,7 +4,11 @@
     margin: 0;
     padding: 0;
 }
-body{
+body,html{
+    /*width: 1920px;*/
+    /*height: 917px;*/
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -16,33 +20,34 @@ body{
 body .outer{
     width: 100%;
     height: 100%;
-    position: absolute;
-}
-.outer header{
-    /*border: 1px solid black;*/
-    width: 750px;
-    height: 100px;
     position: relative;
+    /*border: 1px solid black;*/
+}
+header{
+    position: absolute;
+    /*border: 1px solid black;*/
+    width: 37%;
+    height: 11%;
     margin-left: 0;
 }
 header .headIcon{
     /*border: 1px solid black;*/
-    width: 700px;
-    height: 60px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
     font: 700 60px STXingkai;
-    margin-top: 20px;
     color: #3ea6fd;
 }
 .bodyDiv{
     /*border: 1px solid black;*/
-    width: 550px;
-    height: 500px;
+    width: 29%;
+    height: 55%;
     position: absolute;
     top: 50%;
     left: 50%;
-    margin-left: -250px;
-    margin-top: -230px;
+    transform: translate(-50%,-50%);
 }
 .bodyDiv .bodyTop{
     /*border: 1px solid black;*/
@@ -53,81 +58,9 @@ header .headIcon{
     color: #3ea6fd;
     position: relative;
 }
-.bodyDiv .bodyRegister{
-    /*border: 1px solid black;*/
-    width: 550px;
-    height: 390px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -170px;
-    margin-left: -275px;
-    float: left;
-}
-.bodyDiv .bodyRegister form p{
-    font:600 20px STXingkai;
-    color: #3ea6fd;
-}
-.bodyDiv .bodyRegister .layui-form{
-    position: relative;
-    /*border: 1px solid black;*/
-    height: 270px;
-    width: 450px;
-    top: 50%;
-    left: 50%;
-    margin-left: -225px;
-    margin-top: -155px;
-}
-.bodyDiv .bodyRegister .layui-form .layui-form-item{
-    width: 360px;
-    height: 50px;
-    /*border: 1px solid black;*/
-    top: 25px;
-    left: 50%;
-    margin-left: -180px;
-    margin-top: 5px;
-    position:relative;
-}
-.bodyDiv .bodyRegister .layui-form .layui-form-item i{
-    float: left;
-    margin: 4px 4px;
-    font-size: 37px;
-    color: #77beff;
-}
-.bodyDiv .bodyRegister .layui-form .layui-form-item .layui-form-label{
-    width: 50px;
-    font: 520 20px SourceHanSansSC;
-    margin-top: 11px;
-    padding: 0 4px 0 0;
-}
-.bodyDiv .bodyRegister .layui-form .layui-form-item .layui-input-block{
-    /*border: 1px solid black;*/
-    width: 235px;
-    height: 40px;
-    position: relative;
-    top: 4px;
-}
-.bodyDiv .bodyRegister .layui-form .layui-form-item .layui-input-block input{
-    width: 100%;
-    height: 40px;
-    font: 500 15px SourceHanSansSC;
-}
-.bodyDiv .bodyRegister .layui-form .layui-submit{
-    /*border: 1px solid black;*/
-    width: 450px;
-    height: 60px;
-    position: relative;
-    margin: 45px auto auto;
-}
-.bodyDiv .bodyRegister .layui-form .layui-submit .layui-btn{
-    width: 74%;
-    height: 74%;
-    position: absolute;
-    top: 7px;
-    left: 54px;
-    border-radius: 12px;
-    letter-spacing: 10px;
-    font: 600 22px STXingkai;
-    background-color: #3ea6fd;
-    font-size: 25px;
+@media screen and (max-width: 1919px){
+    header{
+        width: 100%;
+        margin: auto;
+    }
 }

@@ -6,9 +6,12 @@ import com.kitten.Service.User.UserCommit.UserCommitService;
 import com.kitten.Service.User.UserCommit.UserCommitServiceImpl;
 import com.kitten.Util.SessionConstants.Constants;
 import com.kitten.Util.StaticUtil;
-import jakarta.servlet.*;
-import jakarta.servlet.http.*;
-import jakarta.servlet.annotation.*;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import org.apache.ibatis.binding.BindingException;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -28,15 +31,23 @@ public class UserCommitServlet extends HttpServlet {
         String pid = request.getParameter("pid");
         if(pid.equals(StaticUtil.commit)){
             String list = request.getParameter("list");
-            int cim = cim(list);
-            UserCommitService userCommitService = new UserCommitServiceImpl();
+            //判断他有没有成绩
             Users user = (Users)request.getSession().getAttribute(Constants.CONSTANTSSESSION);
-            user.setGrade((long)cim);
-            boolean b = userCommitService.commitGrade(user);
-            if(b){
-                writeResponse(response,cim);
+            UserCommitService userCommitService = new UserCommitServiceImpl();
+            try {
+                long l = userCommitService.selectGrade(user);
+//                writeResponse(response,"have");
+                response.sendRedirect(request.getContextPath()+"/kitten/i.jsp");
+            }catch (BindingException e){
+                int cim = cim(list);
+                user.setGrade((long)cim);
+                boolean b = userCommitService.commitGrade(user);
+                if(b){
+                    writeResponse(response,cim);
+                }
+                request.getSession().setAttribute("commit","ture");
+                System.out.println("不have");
             }
-            request.getSession().setAttribute("commit","ture");
         }
     }
     private void writeResponse(HttpServletResponse response,Object obj){

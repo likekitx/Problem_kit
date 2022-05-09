@@ -20,19 +20,14 @@ public class LoginFilter implements Filter {
         HttpServletRequest req = (HttpServletRequest) request;
         HttpServletResponse res = (HttpServletResponse) response;
         String register = (String)req.getSession().getAttribute("register");
-        String login = (String)req.getSession().getAttribute("login");
         String bool = "ture";
-        if(register.equals(bool)){
-            //点击过登陆后
-            if(login!=null){
-                if(login.equals(bool)){
-                    res.sendRedirect(req.getContextPath()+"/kitten/cit.jsp");
-                }
-            }else {
+        if(register!=null){
+            if(register.equals(bool)){
                 chain.doFilter(request, response);
             }
         }else {
             res.sendRedirect(req.getContextPath()+"/do.jsp");
         }
+
     }
 }

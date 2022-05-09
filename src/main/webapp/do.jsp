@@ -4,6 +4,7 @@
     <meta name="referrer" content="no-referrer">
     <title>Register</title>
     <link href="${pageContext.request.contextPath}/static/css/layui.css" rel="stylesheet"/>
+    <link href="${pageContext.request.contextPath}/css/in.css" rel="stylesheet"/>
     <link href="${pageContext.request.contextPath}/css/register.css" rel="stylesheet"/>
 </head>
 <body>
@@ -25,28 +26,28 @@
                     <i class="layui-icon layui-icon-username"></i>
                     <label class="layui-form-label">学号:</label>
                     <div class="layui-input-block">
-                        <input type="text" name="account" required  lay-verify="required|account" placeholder="请输入学号" autocomplete="off" class="layui-input">
+                        <input type="text" name="account" required  lay-verify="required|account" placeholder="学号" autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <i class="layui-icon layui-icon-at"></i>
                     <label class="layui-form-label">姓名:</label>
                     <div class="layui-input-block">
-                        <input type="text" name="name" lay-verify="name|required" placeholder="姓甚名谁" autocomplete="off" class="layui-input">
+                        <input type="text" name="name" lay-verify="name|required" placeholder="2~5个汉字" autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <i class="layui-icon layui-icon-password"></i>
                     <label class="layui-form-label">密码:</label>
                     <div class="layui-input-block">
-                        <input type="password" name="password" required  lay-verify="required|password" placeholder="请输入密码" autocomplete="off" class="layui-input">
+                        <input type="password" name="password" required  lay-verify="required|password" placeholder="字母、数字、下划线、小数点" autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <i class="layui-icon layui-icon-cellphone"></i>
                     <label class="layui-form-label">电话:</label>
                     <div class="layui-input-block">
-                        <input type="tel" name="phone" placeholder="请输入电话" lay-verify="required|phone" autocomplete="off" class="layui-input">
+                        <input type="tel" name="phone" placeholder="电话号码" lay-verify="required|phone" autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-submit">

@@ -12,4 +12,10 @@ public interface UserCommitService {
      * @return
      */
     boolean commitGrade(Users user);
+
+    /**
+     * @param users
+     * @return
+     */
+    long selectGrade(Users users);
 }

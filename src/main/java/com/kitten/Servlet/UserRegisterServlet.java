@@ -6,9 +6,11 @@ import com.kitten.Service.User.UserRegister.UserRegisterService;
 import com.kitten.Service.User.UserRegister.UserRegisterServiceImpl;
 import com.kitten.Util.SessionConstants.Constants;
 import com.kitten.Util.StaticUtil;
-import jakarta.servlet.*;
-import jakarta.servlet.http.*;
-import jakarta.servlet.annotation.*;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -26,7 +28,6 @@ public class UserRegisterServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String pid = request.getParameter("pid");
-        request.getSession().setAttribute("register","ture");
         if(pid.equals(StaticUtil.register)){
             String account = request.getParameter("account");
             UserRegisterService userRegisterService = new UserRegisterServiceImpl();
@@ -36,18 +37,16 @@ public class UserRegisterServlet extends HttpServlet {
             users.setPassword(request.getParameter("password"));
             users.setPhone(request.getParameter("phone"));
             //有没有这个账号
-            if(userRegisterService.selectUser(users.getAccount())==null){
+            Users users1 = userRegisterService.selectUser(account);
+            if(users1==null){
                 //没有的话让他插入
                 boolean b = userRegisterService.setRegisterUser(users);
-                request.getSession().setAttribute(Constants.CONSTANTSSESSION,users);
                 writeResponse(response,b);
             }else {
-                //有的话返回信息
-                Users users1 = new Users();
-                users1.setAccount(account);
-                request.getSession().setAttribute(Constants.CONSTANTSSESSION,users1);
                 writeResponse(response,"notnull");
             }
+            request.getSession().setAttribute(Constants.CONSTANTSSESSION,users);
+            request.getSession().setAttribute("register","ture");
         }
     }
     private void writeResponse(HttpServletResponse response,Object obj){
