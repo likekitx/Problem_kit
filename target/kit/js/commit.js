@@ -6,7 +6,7 @@
     let list = "";
     let li = new Array(40);
 
-    for (let i = 0; i < 40; i++) {
+    for (let i = 0; i <= 40; i++) {
         form.on('radio('+i+')', function (data) {va(data)});
     }
 
@@ -20,7 +20,6 @@
         li[number-1] = data.elem.value;
         // console.log(li[0])
     }
-
 
     $ul.mouseover(function (event) {
         $(this).css({
